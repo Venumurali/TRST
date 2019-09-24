@@ -8,7 +8,6 @@
  * 
  * @author: Siva Sankar
  */
-package EvenOrOdd;
 
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
