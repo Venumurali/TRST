@@ -8,7 +8,8 @@
  * 
  * @author: Siva Sankar
  */
-package Last;
+package EvenOrOdd;
+
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
