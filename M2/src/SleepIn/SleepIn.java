@@ -33,8 +33,12 @@ public class SleepIn {
         {
             return(true);
         }
+        else if(vacation==true||weekDay==true);
+        {
+            return(true);
+        }
         else{
             return(false);
         }
+        }
     }
-}
