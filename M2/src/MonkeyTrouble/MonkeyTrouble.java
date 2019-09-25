@@ -14,6 +14,7 @@
  * 
  * @author Siva Sankar 
  */
+package MonkeyTrouble;
 public class MonkeyTrouble {
 
     /**
@@ -25,7 +26,10 @@ public class MonkeyTrouble {
      * @return true if we are in trouble and false otherwise.
      */
     public static boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-        // Your code goes here....
+     
+        return (aSmile==bSmile);
+        
+        
 
     }
 }
