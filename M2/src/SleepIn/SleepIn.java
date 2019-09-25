@@ -27,18 +27,16 @@ public class SleepIn {
      * 
      * @return true if it is not a weekday and we're on vacation.
      */
+    
     public static boolean sleepIn(boolean weekDay, boolean vacation) {
 
-        if(weekDay!=true && vacation!=true)
+        
+      if(vacation==true||weekDay==false)
         {
             return(true);
         }
-        else if(vacation==true||weekDay==true);
-        {
-            return(true);
-        }
-        else{
-            return(false);
-        }
+       return(false);
         }
     }
+
+  
