@@ -27,7 +27,7 @@ public class FrontTimes {
         //  Your code goes here....
         String s="";
         if(str.length()<3 || str==" "){
-           for(int i=0;i>n;i++){
+           for(int i=0;i<n;i++){
            s=s+str;
            }
         }
