@@ -18,10 +18,15 @@ public class StringTimes {
      * @param  n   the integer
      * @return the String that is appended n times to the resultant Stirng
      */
-    public static String stringTimes(String str, int n) {
-        //  Your code goes here....
+    public static String stringTimes(String str, int n){
+     int i; 
+     String s="";
+        for(i=0;i<n;i++)
+        {
+          s=s+str;
+        }
         // 
-        
+        return(s);
+    }   
         
     }
-}
