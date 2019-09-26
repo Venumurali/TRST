@@ -23,7 +23,16 @@ public class Squares {
      */
     public static int[] squared(int[] nums) {
         //  Your code goes here.
-        
-        return null;
-    }
+        int[] r=new int[nums.length];
+        if(nums.length>0){
+        for (int i = 0; i <nums.length; i++) 
+         {
+             r[i]=nums[i]*nums[i];
+         }
+        return r;
+}
+else{
+    return nums;
+}
+ }
 }
