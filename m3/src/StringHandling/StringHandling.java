@@ -7,7 +7,7 @@
  * 
  * @author Siva Sankar
  */
-
+package StringHandling;
 public class StringHandling {
 
     /**
@@ -28,4 +28,5 @@ public class StringHandling {
     else{
         return arr;
     }
+}
 }
