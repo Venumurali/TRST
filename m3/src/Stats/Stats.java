@@ -24,7 +24,7 @@
  * 
  * @author Siva Sankar
  */
-
+package Stats;
 import java.util.*;
 
 public class Stats {
@@ -38,9 +38,15 @@ public class Stats {
     public static double mean(int[] arr) {
         //  Your code goes here....
        int i=0;
-       int mean=0;
+       double mean=0;
+       if(arr.length>0)
+       {
        for(i=0;i<arr.length;i++){
-           mean=mean+i;
+           mean=mean+arr[i];
+       }
+       }
+       else{
+           return(mean);
        }
         return(mean/arr.length);
     }
@@ -54,16 +60,20 @@ public class Stats {
      * @param arr, the input array contains random elements (not in sorted order)
      * @return the median of the elements of the array.
      */
+    
     public static double median(int[] arr) {
         //  Your code goes here...
-        int [] s;
-        s=Arrays.sort(arr);
-        int i=0;
-        int median=0;
-        for(i=0;i<s.length;i++){
-            median=(s.length+1)/2;
+        
+        Arrays.sort(arr);
+        int k= arr.length;
+        if(k%2==0)
+        {
+            //System.out.println((arr[l]+arr[l+1])/2);
+            return (double)(arr[k/2]+arr[(k/2)-1])/2;
         }
-         return(s[median]);
+        else{
+            return (double)arr[k/2];
+        }
      }
         
     
@@ -77,10 +87,23 @@ public class Stats {
      */
     public static int mode(int[] arr) {
         //  Your code goes here....
-
+        int maxValue = 0, maxCount = 0;
+        for (int i = 0; i <arr.length;++i)
+         {
+           int count = 0;
+           for (int j = 0; j <arr.length; ++j) {
+              if (arr[j] == arr[i])
+              ++count;
+           }
+           if (count > maxCount) {
+              maxCount = count;
+              maxValue = arr[i];
+           }
+           if (count>1)
+            return maxValue;
+           }
         return 0;
     }
-
     /**
      * This method returns the variance of the input array.
      * Make use of the mean functon which has already written.
@@ -90,9 +113,19 @@ public class Stats {
      */
     public static double variance(int[] arr) {
         //  Your code goes here....
-
-        return 0.0;
+        
+        double mean=0;
+        for(int i=0;i<arr.length;i++){
+            mean=mean+arr[i];
+        }
+        double var=0;
+        for(int i=0;i<arr.length;i++){
+            var += (arr[i] - (mean/arr.length)) * (arr[i] - (mean/arr.length)); 
+        }
+       return (var/(arr.length));
     }
+
+
 
     /**
      * This method returns the standard deviation of the array.
@@ -102,7 +135,16 @@ public class Stats {
      */
     public static double standardDeviation(int[] arr) {
         //  Your code goes here....
+        double mean=0;
+        for(int i=0;i<arr.length;i++){
+            mean=mean+arr[i];
+        }
+        double var=0;
+        for(int i=0;i<arr.length;i++){
+            var += (arr[i] - (mean/arr.length)) * (arr[i] - (mean/arr.length)); 
+        }
+       return Math.sqrt(var/(arr.length));
 
-        return 0.0;
+        
     }
 }
