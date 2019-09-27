@@ -23,20 +23,25 @@ class ContactsManager {
      * Define a variable myFriends which is an array that can hold 
      * the contacts of your friends.
      */
+    Contact []myFriends;
 
     /**
      * Define a variable friendsCount of type int maintain the number of 
      * contacts of your friends.
      */
-
+    int friendsCount;
 
     /**
      * When the object of ContactManager is created, the constructor should 
      * constrcut the object initialy with the following requirements.
-     * 
      * 1. Initializes the friendsCount to 0 as there no contacts in the list.
      * 2. myFriends with array initial size of 500
      */
+    ContactsManager(){
+       friendsCount=0;
+       myFriends[500];
+
+    }
  
     /**
      * The addContact method takes in a parameter of type contact object and 
@@ -45,7 +50,7 @@ class ContactsManager {
      */
     public void addContact(Contact contact) {
         //  Your code goes here....
-
+    
         //  Nothing to be returned... As this method is void...
     }
  
