@@ -8,17 +8,21 @@
  * @author Siva Sankar
  */
 package ContactManager;
+
+import java.util.jar.Attributes.Name;
+
 //  Your code goes here... For Contact class
 class Contact
 {
-    private String Name;
+    public static final String getEmail = null;
+	private String Name;
     private String Email;
-    private String phoneNumber;
-    
-      Contact(){
+    private String PhoneNumber;
+	
+      Contact(String Name,String Email,String PhoneNumber){
           this.Name=Name;
           this.Email=Email;
-          this.phoneNumber=phoneNumber;
+          this.PhoneNumber=PhoneNumber;
       }
       
 
@@ -36,13 +40,16 @@ class Contact
         this.Email = Email;
     }
     public String getPhoneNumber() {
-        return phoneNumber;
+        return PhoneNumber;
     }
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhoneNumber(String PhoneNumber) {
+        this.PhoneNumber = PhoneNumber;
     }
-    public String tostring(){
-        return({ "Name"+"Email"+"PhoneNumber" });
+
+    @Override
+    public String toString() {
+        return "{ Name = "+ Name +", Email = " +Email + ", Phone Number = " + PhoneNumber+" }";
     }
+    
 
 }

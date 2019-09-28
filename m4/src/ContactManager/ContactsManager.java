@@ -16,10 +16,10 @@
  * 
  * @author Siva Sankar
  */
-
+package ContactManager;
 class ContactsManager {
 
-    /**
+    /** 
      * Define a variable myFriends which is an array that can hold 
      * the contacts of your friends.
      */
@@ -37,9 +37,9 @@ class ContactsManager {
      * 1. Initializes the friendsCount to 0 as there no contacts in the list.
      * 2. myFriends with array initial size of 500
      */
-    ContactsManager(){
+    public ContactsManager(){
        friendsCount=0;
-       myFriends[500];
+       myFriends = new Contact[500];
 
     }
  
@@ -50,6 +50,8 @@ class ContactsManager {
      */
     public void addContact(Contact contact) {
         //  Your code goes here....
+        myFriends[friendsCount]=contact;
+             friendsCount+=1;
     
         //  Nothing to be returned... As this method is void...
     }
@@ -62,7 +64,11 @@ class ContactsManager {
      */
     public Contact searchContact(String searchName) {
         //  Your code goes here....
-
+        for(int i=0;i<friendsCount;i++){
+            if(myFriends[i].getName().equals(searchName)){
+                return myFriends[i];
+            }
+        }    
         return null;
     }
 
@@ -74,7 +80,11 @@ class ContactsManager {
      */
     public Contact searchContactByEmail(String email) {
         //  Your code goes here....
-
+        for(int i=0;i<friendsCount;i++){
+        if(myFriends[i].getEmail.equals(email)){
+            return myFriends[i];
+           }
+        }
         return null;
     }
 
@@ -87,11 +97,19 @@ class ContactsManager {
      */
     public boolean deleteContact(String searchName) {
         //  Your code goes here....
-
-        return false;
+        for(int i=0;i<friendsCount;i++){
+            if(myFriends[i].getName().equals(searchName))
+                    {
+                        myFriends[i].setName(null);
+                        myFriends[i].setEmail(null);
+                        myFriends[i].setPhoneNumber(null);
+                        return true;
+                    }
     }
-
+        return false;
+}
+}
     // Any additional method that you want to implement by yourself.
 
     //  Happy Coding... Have Fun.....
-}
+
