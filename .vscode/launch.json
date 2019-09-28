@@ -8,6 +8,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - TestRunner",
             "request": "launch",
+            "mainClass": "ContactManager.TestRunner",
+            "projectName": "m4"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestRunner",
+            "request": "launch",
             "mainClass": "Stats.TestRunner",
             "projectName": "m3"
         },

@@ -51,7 +51,7 @@ class ContactsManager {
     public void addContact(Contact contact) {
         //  Your code goes here....
         myFriends[friendsCount]=contact;
-             friendsCount+=1;
+             this.friendsCount+=1;
     
         //  Nothing to be returned... As this method is void...
     }
@@ -65,7 +65,7 @@ class ContactsManager {
     public Contact searchContact(String searchName) {
         //  Your code goes here....
         for(int i=0;i<friendsCount;i++){
-            if(myFriends[i].getName().equals(searchName)){
+            if(myFriends[i]!=null && myFriends[i].getName().equals(searchName)){
                 return myFriends[i];
             }
         }    
@@ -81,7 +81,7 @@ class ContactsManager {
     public Contact searchContactByEmail(String email) {
         //  Your code goes here....
         for(int i=0;i<friendsCount;i++){
-        if(myFriends[i].getEmail.equals(email)){
+        if(myFriends[i]!=null && myFriends[i].getEmail().equals(email)){
             return myFriends[i];
            }
         }
@@ -98,17 +98,23 @@ class ContactsManager {
     public boolean deleteContact(String searchName) {
         //  Your code goes here....
         for(int i=0;i<friendsCount;i++){
-            if(myFriends[i].getName().equals(searchName))
+            if(myFriends[i]!=null && myFriends[i].getName().equals(searchName))
                     {
-                        myFriends[i].setName(null);
-                        myFriends[i].setEmail(null);
-                        myFriends[i].setPhoneNumber(null);
+                        myFriends[i] = null;
                         return true;
                     }
-    }
+                }
         return false;
-}
-}
+                }
+            }
+        
+
+    //static class Main {
+        //public static void main(String[] args) {
+           // ContactManager myContactManager = new ContactManager();
+        //}
+    //}
+//}
     // Any additional method that you want to implement by yourself.
 
     //  Happy Coding... Have Fun.....

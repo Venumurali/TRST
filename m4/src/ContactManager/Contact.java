@@ -9,12 +9,12 @@
  */
 package ContactManager;
 
-import java.util.jar.Attributes.Name;
+
 
 //  Your code goes here... For Contact class
 class Contact
 {
-    public static final String getEmail = null;
+    
 	private String Name;
     private String Email;
     private String PhoneNumber;
@@ -28,19 +28,19 @@ class Contact
 
     
     public String getName() {
-        return Name;
+        return this.Name;
     }
         public void setName(String Name) {
         this.Name = Name;
     }
     public String getEmail() {
-        return Email;
+        return this.Email;
     }
     public void setEmail(String Email) {
         this.Email = Email;
     }
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return this.PhoneNumber;
     }
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
