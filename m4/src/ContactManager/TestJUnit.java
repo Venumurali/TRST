@@ -66,6 +66,8 @@ public class TestJUnit {
 		assertEquals("5. ", "randy@gmail.com", contactManager.searchContact("Randy Bryant").getEmail());
 	}
 
+	
+
 	@Test
 	public void testCase4() {
 		ContactsManager contactManager = new ContactsManager();
