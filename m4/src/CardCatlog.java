@@ -51,46 +51,7 @@ public void SetCardbyTitlelist(Card d){
 	if(f==0);
 		  CardbyTitle[Cardcount]=d;
 }
-public void setAnAuthor(Card d){
-	int f=0;
-	for(int i=0;i<Cardcount;i++){
-		int j=Cardcount-1;
-		if(CardbyTitle[i].getAuthor().compareTo(d.getAuthor())>0){
-			while(j>=i){
-			CardbyTitle[j+1]=CardbyTitle[j];
-			display();
-			j--;
-			}
-			CardbyTitle[i]=d;
-			f=1;
 
-			break;
-		}
-	}
-
-	if(f==0);
-		  CardbyTitle[Cardcount]=d;
-}
-public void setSubject(Card d){
-	int f=0;
-	for(int i=0;i<Cardcount;i++){
-		int j=Cardcount-1;
-		if(CardbyTitle[i].getSubject().compareTo(d.getSubject())>0){
-			while(j>=i){
-			CardbyTitle[j+1]=CardbyTitle[j];
-			display();
-			j--;
-			}
-			CardbyTitle[i]=d;
-			f=1;
-
-			break;
-		}
-	}
-
-	if(f==0);
-		  CardbyTitle[Cardcount]=d;
-}
 public void del(String title){
 	  for(int i=0;i<Cardcount;i++){
 		if(CardbyTitle[i].getTitle().compareTo(title)==0)
@@ -129,7 +90,7 @@ public static void main(String[] args){
 			  String author=sc.next();
               System.out.println("enter subject");
 			  String subject=sc.next();
-			   Card ct=new Card(title, author, subject);
+			Card ct=new Card(title, author, subject);
 			   dt.addCard(ct);
 			   break;
 
