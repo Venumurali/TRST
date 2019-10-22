@@ -4,7 +4,7 @@
  *
  * @author Siva Sankar
  */
-
+package Power;
  public class Power {
     /**
      * This method finds a^b where both a and b are integers.
@@ -13,7 +13,7 @@
      * @return a^b which is a long value.
      */
      public static long pow(int a, int b) {
-        return -1;
+        return (long) Math.pow(a, b);
      }
 
      /**
@@ -24,7 +24,7 @@
      * @return a^b which is a long value.
      */
      public static double pow(float a, int b) {
-        return -1;
+        return (double) Math.pow(a, b);
         
      }
  }

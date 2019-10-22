@@ -8,11 +8,10 @@
  * 
  * @author: Siva Sankar
  */
-
-import org.junit.Test;
+package Power;
 import static org.junit.Assert.assertEquals;
 
-import java.beans.Transient;
+import org.junit.Test;
 
 public class TestJUnit {
 

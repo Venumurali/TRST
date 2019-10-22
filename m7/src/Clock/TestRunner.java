@@ -8,7 +8,7 @@
  * Please don't modify the code.
  * @author Siva Sankar
  */
-package Power;
+package Clock;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
