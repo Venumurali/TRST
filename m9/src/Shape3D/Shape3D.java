@@ -1,4 +1,4 @@
-package io.github.jiangdequan;
+package Shape3D;
 
 public class Shape3D {
      public double getArea(){  

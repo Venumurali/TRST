@@ -1,14 +1,14 @@
-package io.github.jiangdequan;
+package Shape3D;
 
 public class Squarepyramid extends Shape3D {
     private double length; 
     private double height;
 
-    public SquarePyramid() { 
+    public void SquarePyramid() {
         length = 0; 
         height = 0; 
     } 
-    public SquarePyramid(double l, double h) { 
+    public Squarepyramid(double l, double h) {
         length = l; 
         height = h; 
     }
@@ -28,6 +28,7 @@ public class Squarepyramid extends Shape3D {
 
     public double getVolume() { 
           // write code here  length * length * height / 3.0; 
+          return length*length*height/3.0;
     }
 
     public String toString() { 
@@ -35,8 +36,8 @@ public class Squarepyramid extends Shape3D {
     }
 
     public boolean equals(Object obj) { 
-        if (obj instanceof SquarePyramid) { 
-            SquarePyramid other = (SquarePyramid) obj; 
+        if (obj instanceof Squarepyramid) {
+            Squarepyramid other = (Squarepyramid) obj;
             return length == other.length && height == other.height; 
         } 
         else 

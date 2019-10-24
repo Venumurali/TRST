@@ -1,4 +1,4 @@
-package io.github.jiangdequan;
+package Shape3D;
 
 
  class RectangularPrism extends Shape3D { 
@@ -6,20 +6,26 @@ package io.github.jiangdequan;
     private double width; 
     private double height;
 
-    public RectangularPrism() { 
-      // write code here 
+    public  RectangularPrism() { 
+      length=0;
+      width=0;
+      height=0;
     }
+    public  RectangularPrism(double l,double w,double h){
 
-    public RectangularPrism(double l, double w, double h) { 
-      // write code here 2 * (length * width + width * height + length * height);
+            length=l;
+            width=w;
+            height=h;
     }
-
+     
        public double getLength() { 
-      // write code here  length * width * height; 
+      // write code here  length * width * height;
+      return length; 
     }
 
     public double getWidth() { 
        // write code here 
+       return width;
     }
 
      public double getHeight() { 
@@ -27,11 +33,13 @@ package io.github.jiangdequan;
     }
 
     public double getArea() { 
-        // write code here 
-    }
-
-    public double getVolume() { 
+       
+      
+      
+    double getVolume()
+     { 
        // write code here 
+    return (length*width*height);
     }
 
     public String toString() { 
@@ -39,6 +47,13 @@ package io.github.jiangdequan;
     }
 
     public boolean equals(Object obj) { 
-       / write code here use instance of operator
+      // write code here use instance of operator
+        if (obj instanceof Shape3D ) {
+           RectangularPrism other = (RectangularPrism) obj;
+            return  length==other.length && width==other.width && height==other.height; 
+        } 
+        else 
+            return false; 
+    } 
     } 
 }

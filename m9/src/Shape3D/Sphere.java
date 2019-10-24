@@ -1,4 +1,4 @@
-package io.github.jiangdequan;
+package Shape3D;
 
 public class Sphere extends Shape3D {
      private double radius;
@@ -17,10 +17,12 @@ public class Sphere extends Shape3D {
 
     public double getArea() { 
         // write code here  4 * Math.PI * Math.pow(radius, 2); 
+        return 4*Math.PI*Math.pow(radius, 2);
     }
 
     public double getVolume() { 
         // write code here  4.0 * Math.PI * Math.pow(radius, 3) / 3.0; 
+        return (4*Math.PI*Math.pow(radius,3));
     }
 
     public String toString() { 
@@ -28,7 +30,13 @@ public class Sphere extends Shape3D {
     }
 
     public boolean equals(Object obj) { 
-       // write code here use instance of operator
+        if (obj instanceof Sphere) {
+            Sphere other = (Sphere) obj;
+            return radius == other.radius; 
+        } 
+        else 
+            return false; 
     } 
+       
 
 }
