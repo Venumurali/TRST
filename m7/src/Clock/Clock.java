@@ -57,31 +57,28 @@ public class Clock {
         
     }
 
-    private void check() {
+   // private void check() {
         
-    }
+   // }
 
     // Adds 1 minute to the time on this clock.
     public void tic() {
+        MM++;
         if(MM==60){
             MM=00;
             HH++;
-        }
-        else if(HH==00 && MM==60)
+             if(HH==00 && MM==60)
         {
            HH=00;
-           MM++;
         }
-      else{
-          MM++;
       }  
     }
 
     // Adds Δ min to the time on this clock.
     public void toc(int delta) {
-        int m=(delta/60);
-        int h=(delta/60);
-        if(())
+        for (int i=0;i<delta;i++){
+            tic();
+        }
         
     }
 
