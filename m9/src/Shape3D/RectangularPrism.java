@@ -33,11 +33,10 @@ package Shape3D;
     }
 
     public double getArea() { 
-       
+       return 2*length*width+width*height+length*height;
+       }
       
-      
-    double getVolume()
-     { 
+    public double getVolume() { 
        // write code here 
     return (length*width*height);
     }
@@ -50,10 +49,9 @@ package Shape3D;
       // write code here use instance of operator
         if (obj instanceof Shape3D ) {
            RectangularPrism other = (RectangularPrism) obj;
-            return  length==other.length && width==other.width && height==other.height; 
+            return  length== other.length && width==other.width && height==other.height; 
         } 
         else 
             return false; 
     } 
     } 
-}
