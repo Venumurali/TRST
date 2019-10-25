@@ -1,4 +1,4 @@
-package JavaMoodle18.AbstractClasses;
+package Abstractshape;
 import java.util.Scanner;
 
 public class Menu {
