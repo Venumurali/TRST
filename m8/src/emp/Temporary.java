@@ -2,8 +2,6 @@ package emp;
 
 public class Temporary extends Employee {
 	int days;
-
-
 	
 
 	public Temporary(String Name, String Surname, String Address, double Basic_Salary,double d) {
